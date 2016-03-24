@@ -1,3 +1,6 @@
 language: java
 after_success:
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then wget https://gist.githubusercontent.com/maxikg/87837abcd1bfe9494cda/raw/settings.xml && mvn deploy --settings settings.xml; fi
+notifications:
+  slack:
+    secure: B77XBlMjv+Sm59bunIyxIxPMLEAgMGTsa41qClI1R0F9y5wfcYb3m5VBRFTc+htPfMFqbcDTEA92u4TqukMsvmWfiJAMDby/vxT3G49IBYyqF8gjJrAMIJtmdJtG7oujlrNGnhC3hZbeqLAqzbMkWJAo3BWn79tb4LNatuqfReFs5uZd6XLbTvYO5eiDbIG8GpY1j2TyK+fZXfwDeUfpAiwTG8NHknNVV+MF2+waRoZ/Hm8VsZGIvrOjjJPG6YtG8x0VmC7a6rEvjbfhutU8CO+/PIkBjCGGqioRiGtS44Xvbz70k/CscJT1Nr5lXxAKmsDiWwJIhTxDqwsl17imhg8Ges/XW0EBpK+uShiPo7uWprA5/s4OYUzStoomgt2ot+II11xCnBdDLMT+bKRFCIq/HKiUooI+ZLPEdMN1YIm/J4QSOnjVOg+RC1zEhF3g9EWVmXXfYXwqv7TsxdsAKws4le6ESM+Eg4ysvLSJUqaHsIHSNgckNwaleTRvYbCNHI0ta4AczGrtKH/EhKn16katQMUmrKE1xwAJH+SXjgagydxo+y7d7RXnoBjLPrycOSaoLDxzos3epH2RenYus6XrG0ky8+TVyIgRkTVS8nOYC6so+aDrC0dOqdndJO3mjyqcCh9RbdUOigYyQVSk2/KrDdL8x3CO42EDX8X5Z2U=
