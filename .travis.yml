@@ -1,0 +1,3 @@
+language: java
+after_success:
+  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then wget https://gist.githubusercontent.com/maxikg/87837abcd1bfe9494cda/raw/settings.xml && mvn deploy --settings settings.xml; fi
