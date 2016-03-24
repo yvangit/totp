@@ -65,3 +65,8 @@ public class Test {
     }
 }
 ```
+
+
+## License
+
+See [LICENSE.txt](/LICENSE.txt) for the Apache License, Version 2.0.
